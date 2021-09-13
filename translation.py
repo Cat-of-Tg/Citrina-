@@ -3,8 +3,12 @@ class Translation(object):
 Thank you for using me 🍁
 Enter your Telegram Phone Number, to get the APP-ID from my.telegram.org
 
-PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
-parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
+If:
+            first_name = update.effective_user.first_name
+            update.effective_message.reply_photo(
+                TECHNO_IMG,
+                PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
+                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
                             text="🍁ADD ELZA TO YOUR GROUP🍁",url="t.me/{}?startgroup=true".format(bot.username))
@@ -22,6 +26,7 @@ parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
                              text="🍁MY CREATOR🍁",
                              url="t.me/cat_of_tg")
                      ]]))
+
 
 /start at any stage to re-enter your details"""
     AFTER_RECVD_CODE_TEXT = """I see!
