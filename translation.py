@@ -1,7 +1,25 @@
 class Translation(object):
     START_TEXT = """Hi! I Am Citrina 🍁
-Thank you for using me 😬
+Thank you for using me 🍁
 Enter your Telegram Phone Number, to get the APP-ID from my.telegram.org
+parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
+                    [[
+                        InlineKeyboardButton(
+                            text="🍁ADD ELZA TO YOUR GROUP🍁",url="t.me/{}?startgroup=true".format(bot.username))
+                    ],
+                     [
+                         InlineKeyboardButton(
+                             text="🍁HELP🍁",
+                            callback_data="help_back".format(bot.username)),
+                         InlineKeyboardButton(
+                             text="🍁UPDATES🍁",
+                             url="https://t.me/TEAM_LAD")
+                     ],
+                     [
+                         InlineKeyboardButton(
+                             text="🍁MY CREATOR🍁",
+                             url="t.me/cat_of_tg")
+                     ]]))
 
 /start at any stage to re-enter your details"""
     AFTER_RECVD_CODE_TEXT = """I see!
