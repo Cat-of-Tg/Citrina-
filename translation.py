@@ -3,7 +3,7 @@ class Translation(object):
 Thank you for using me 🍁
 Enter your Telegram Phone Number, to get the APP-ID from my.telegram.org
 
-If:
+    else:
             first_name = update.effective_user.first_name
             update.effective_message.reply_photo(
                 TECHNO_IMG,
