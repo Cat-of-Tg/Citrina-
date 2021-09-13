@@ -2,6 +2,8 @@ class Translation(object):
     START_TEXT = """Hi! I Am Citrina 🍁
 Thank you for using me 🍁
 Enter your Telegram Phone Number, to get the APP-ID from my.telegram.org
+
+PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
 parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
