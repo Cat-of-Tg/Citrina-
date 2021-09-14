@@ -1,10 +1,24 @@
+
+from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 class Translation(object):
     START_TEXT = """Hi! I Am Citrina 🍁
 Thank you for using me 🍁
 Enter your Telegram Phone Number, to get the APP-ID from my.telegram.org
 
-[CHANNEL🍁](buttonurl://t.me/team_lad)
 
+@Client.on_message(filters.command("start"))
+async def start(client, message):
+   buttons = [
+            
+            [
+                InlineKeyboardButton("UPSATES", url=f"https://t.me/Team_Lad"),
+                InlineKeyboardButton("SUPPORT", url=f"https://t.me/teamladz_bothub"),
+            ],
+            [
+                InlineKeyboardButton("DEV", url=f"https://t.me/cat_of_tg"),
+            ],
+            
+            ]
 
 /start at any stage to re-enter your details"""
     AFTER_RECVD_CODE_TEXT = """I see!
