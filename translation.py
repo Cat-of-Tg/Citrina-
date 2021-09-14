@@ -1,5 +1,5 @@
 
-from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
+import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 class Translation(object):
     START_TEXT = """Hi! I Am Citrina 🍁
 Thank you for using me 🍁
